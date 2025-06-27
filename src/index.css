@@ -146,6 +146,103 @@
   }
 }
 
+/* New animations for enhanced effects */
+@keyframes glow-yellow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.6), 0 0 45px rgba(251, 191, 36, 0.3);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes energy-wave {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes energy-wave-delayed {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+@keyframes energy-wave-slow {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes burst-animation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes success-message {
+  0% {
+    transform: translateY(20px) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+}
+
 .pulse-button {
   animation: pulse-button 2s ease-in-out infinite;
 }
@@ -160,4 +257,36 @@
 
 .glow-effect {
   animation: glow 2s ease-in-out infinite;
+}
+
+.glow-yellow {
+  animation: glow-yellow 2s ease-in-out infinite;
+}
+
+.pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.energy-wave {
+  animation: energy-wave 1s ease-out infinite;
+}
+
+.energy-wave-delayed {
+  animation: energy-wave-delayed 1s ease-out infinite 0.3s;
+}
+
+.energy-wave-slow {
+  animation: energy-wave-slow 1s ease-out infinite 0.6s;
+}
+
+.burst-animation {
+  animation: burst-animation 3s ease-out;
+}
+
+.particle-float {
+  animation: particle-float 2s ease-out infinite;
+}
+
+.success-message {
+  animation: success-message 3s ease-in-out;
 }
